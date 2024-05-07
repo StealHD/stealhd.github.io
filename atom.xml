@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>StealHD</title>
   
+  <subtitle>子标题</subtitle>
+  <link href="https://stealhd.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
-  <updated>2024-05-07T15:32:35.083Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://stealhd.github.io/"/>
+  <updated>2024-05-07T18:26:01.559Z</updated>
+  <id>https://stealhd.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Feng sj</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo搭建部署</title>
+    <link href="https://stealhd.github.io/2024/05/08/hexo%E6%90%AD%E5%BB%BA/"/>
+    <id>https://stealhd.github.io/2024/05/08/hexo%E6%90%AD%E5%BB%BA/</id>
+    <published>2024-05-07T17:47:16.062Z</published>
+    <updated>2024-05-07T18:26:01.559Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><h3 id="安装前所需环境介绍"><a href="#安装前所需环境介绍" class="headerlink" title="安装前所需环境介绍"></a>安装前所需环境介绍</h3><p>安装 Hexo 之前，需要确保您的 PC 中已经安装以下工具:</p><ul><li>Node.js [地址: <a href="https://nodejs.org/en/">Node.js — Run JavaScript Everywhere (nodejs.org)</a>]</li><li>Git [地址: <a href="https://git-scm.com/">Git (git-scm.com)</a>]</li></ul><h3 id="安装hexo相关组件"><a href="#安装hexo相关组件" class="headerlink" title="安装hexo相关组件"></a>安装hexo相关组件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装完成后cnpm -v检查输出</span></span><br><span class="line">npm install -g cnpm --registry==https://registry.npm.taobao.org</span><br><span class="line"><span class="comment">#安装完成后hexo -v检查输出</span></span><br><span class="line">cnpm install -g hexo-cli</span><br><span class="line"><span class="comment">#之后更换主题有用</span></span><br><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure><p>建议永远安装最新版本的 Hexo。</p><table><thead><tr><th align="center">Hexo 版本</th><th align="center">最低兼容 Node.js 版本</th></tr></thead><tbody><tr><td align="center">6.0+</td><td align="center">12.13.0</td></tr><tr><td align="center">5.0+</td><td align="center">10.13.0</td></tr><tr><td align="center">4.1 - 4.2</td><td align="center">8.10</td></tr><tr><td align="center">4.0</td><td align="center">8.6</td></tr><tr><td align="center">3.3 - 3.9</td><td align="center">6.9</td></tr><tr><td align="center">3.2 - 3.3</td><td align="center">0.12</td></tr><tr><td align="center">3.0 - 3.1</td><td align="center">0.10 or iojs</td></tr><tr><td align="center">0.0.1 - 2.8</td><td align="center">0.10</td></tr></tbody></table><h3 id="选择合适文件夹下一键部署"><a href="#选择合适文件夹下一键部署" class="headerlink" title="选择合适文件夹下一键部署"></a>选择合适文件夹下一键部署</h3><p>官方参考文档</p><p><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#初始化</span></span><br><span class="line">hexo init </span><br><span class="line">npm install</span><br><span class="line"><span class="comment">#启动服务 http://localhost:4000/</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><h2 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h2><p>​        这个只是简单的部署，还要考虑网站部署，参数修改，文章维护，主题优化等各个方面来健全自己的blog。</p><p>之后陆续跟新一下内容。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;快速上手&quot;&gt;&lt;a href=&quot;#快速上手&quot; class=&quot;headerlink&quot; title=&quot;快速上手&quot;&gt;&lt;/a&gt;快速上手&lt;/h2&gt;&lt;h3 id=&quot;安装前所需环境介绍&quot;&gt;&lt;a href=&quot;#安装前所需环境介绍&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2024/05/07/hello-world/"/>
-    <id>http://example.com/2024/05/07/hello-world/</id>
+    <link href="https://stealhd.github.io/2024/05/07/hello-world/"/>
+    <id>https://stealhd.github.io/2024/05/07/hello-world/</id>
     <published>2024-05-07T15:32:35.082Z</published>
-    <updated>2024-05-07T15:32:35.083Z</updated>
+    <updated>2024-05-07T18:13:45.710Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     

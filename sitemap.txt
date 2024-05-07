@@ -1,2 +1,3 @@
-http://example.com/2024/05/07/hello-world/
-http://example.com/
+https://stealhd.github.io/2024/05/08/hexo%E6%90%AD%E5%BB%BA/
+https://stealhd.github.io/2024/05/07/hello-world/
+https://stealhd.github.io/
