@@ -7,8 +7,8 @@ https://stealhd.github.io/categories/index.html
 https://stealhd.github.io/tags/index.html
 https://stealhd.github.io/about/index.html
 https://stealhd.github.io/
-https://stealhd.github.io/tags/Oracle/
-https://stealhd.github.io/tags/Ogg/
 https://stealhd.github.io/tags/DMDB/
 https://stealhd.github.io/tags/Kylin/
+https://stealhd.github.io/tags/Oracle/
+https://stealhd.github.io/tags/Ogg/
 https://stealhd.github.io/tags/Hexo/
