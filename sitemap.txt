@@ -1,5 +1,5 @@
-https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/
 https://stealhd.github.io/2024/05/15/Installing-Oracle-GoldenGate/
+https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/
 https://stealhd.github.io/2024/05/14/Oracle11g_install/
 https://stealhd.github.io/2024/05/17/DMDB-install-Base-on-Kylin/
 https://stealhd.github.io/2024/05/07/hello-world/

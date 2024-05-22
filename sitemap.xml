@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/</loc>
+    <loc>https://stealhd.github.io/2024/05/15/Installing-Oracle-GoldenGate/</loc>
     
     <lastmod>2024-05-22</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>https://stealhd.github.io/2024/05/15/Installing-Oracle-GoldenGate/</loc>
+    <loc>https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/</loc>
     
-    <lastmod>2024-05-21</lastmod>
+    <lastmod>2024-05-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
