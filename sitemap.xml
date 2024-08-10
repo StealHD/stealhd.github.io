@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://stealhd.github.io/wiki/stellar/index%20copy.html</loc>
+    <loc>https://stealhd.github.io/wiki/stellar/pve.html</loc>
     
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,16 @@
   <url>
     <loc>https://stealhd.github.io/wiki/stellar/index.html</loc>
     
-    <lastmod>2024-05-30</lastmod>
+    <lastmod>2024-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/</loc>
+    
+    <lastmod>2024-06-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +31,7 @@
   <url>
     <loc>https://stealhd.github.io/wiki/notes/index.html</loc>
     
-    <lastmod>2024-05-30</lastmod>
+    <lastmod>2024-06-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/</loc>
-    
-    <lastmod>2024-05-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://stealhd.github.io/2024/05/14/Oracle11g_install/</loc>
     
     <lastmod>2024-05-20</lastmod>
@@ -121,7 +121,7 @@
 
   <url>
     <loc>https://stealhd.github.io/</loc>
-    <lastmod>2024-06-02</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,56 +129,56 @@
   
   <url>
     <loc>https://stealhd.github.io/tags/DMDB/</loc>
-    <lastmod>2024-06-02</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://stealhd.github.io/tags/Kylin/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://stealhd.github.io/tags/Oracle/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://stealhd.github.io/tags/Ogg/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://stealhd.github.io/tags/Prometheus/</loc>
-    <lastmod>2024-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://stealhd.github.io/tags/Grafana/</loc>
-    <lastmod>2024-06-02</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://stealhd.github.io/tags/Mysql/</loc>
-    <lastmod>2024-06-02</lastmod>
+    <lastmod>2024-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://stealhd.github.io/tags/Oracle/</loc>
+    <lastmod>2024-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://stealhd.github.io/tags/Ogg/</loc>
+    <lastmod>2024-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://stealhd.github.io/tags/Prometheus/</loc>
+    <lastmod>2024-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://stealhd.github.io/tags/Grafana/</loc>
+    <lastmod>2024-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://stealhd.github.io/tags/Hexo/</loc>
-    <lastmod>2024-06-02</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
