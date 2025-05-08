@@ -1,4 +1,5 @@
-https://stealhd.github.io/2024/08/07/HA-install/
+https://stealhd.github.io/2024/05/07/hello-world/
+https://stealhd.github.io/2024/08/12/Zerotier/
 https://stealhd.github.io/2024/08/01/Oracle-Dblink/
 https://stealhd.github.io/wiki/stellar/pve.html
 https://stealhd.github.io/wiki/stellar/index.html
@@ -6,7 +7,6 @@ https://stealhd.github.io/2024/05/22/Install-Mysql8-bash-on-Centos7/
 https://stealhd.github.io/wiki/notes/index.html
 https://stealhd.github.io/2024/05/23/Monitoring-system-installation/
 https://stealhd.github.io/categories/index.html
-https://stealhd.github.io/2024/05/07/hello-world/
 https://stealhd.github.io/2024/05/17/DMDB-install-Base-on-Kylin/
 https://stealhd.github.io/2024/05/15/Installing-Oracle-GoldenGate/
 https://stealhd.github.io/2024/05/14/Oracle11g_install/
@@ -16,10 +16,10 @@ https://stealhd.github.io/about/index.html
 https://stealhd.github.io/
 https://stealhd.github.io/tags/DMDB/
 https://stealhd.github.io/tags/Kylin/
-https://stealhd.github.io/tags/HA/
 https://stealhd.github.io/tags/Mysql/
-https://stealhd.github.io/tags/Prometheus/
-https://stealhd.github.io/tags/Grafana/
 https://stealhd.github.io/tags/Oracle/
 https://stealhd.github.io/tags/Ogg/
+https://stealhd.github.io/tags/Prometheus/
+https://stealhd.github.io/tags/Grafana/
+https://stealhd.github.io/tags/Zerotier/
 https://stealhd.github.io/tags/Hexo/

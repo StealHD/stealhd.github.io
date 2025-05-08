@@ -17,23 +17,30 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   
-  <title>HA nstall - StealHD</title>
+  <title>Zerotier - StealHD</title>
 
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="HA nstall">
-<meta property="og:url" content="https://stealhd.github.io/2024/08/07/HA-install/index.html">
+    <meta name="description" content="基于Zerotier根服务器的内网穿透部署创建（伪）根服务器项目地址：https:&#x2F;&#x2F;github.com&#x2F;Jonnyan404&#x2F;zerotier-planet 1docker run --restart&#x3D;on-failure:3 -d --name ztncui -e HTTP_PORT&#x3D;4000 -e HTTP_ALL_INTERFACES&#x3D;yes -e ZTNCUI_PASSWD&#x3D;mrdoc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zerotier">
+<meta property="og:url" content="https://stealhd.github.io/2024/08/12/Zerotier/index.html">
 <meta property="og:site_name" content="StealHD">
+<meta property="og:description" content="基于Zerotier根服务器的内网穿透部署创建（伪）根服务器项目地址：https:&#x2F;&#x2F;github.com&#x2F;Jonnyan404&#x2F;zerotier-planet 1docker run --restart&#x3D;on-failure:3 -d --name ztncui -e HTTP_PORT&#x3D;4000 -e HTTP_ALL_INTERFACES&#x3D;yes -e ZTNCUI_PASSWD&#x3D;mrdoc">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-07T02:55:18.000Z">
-<meta property="article:modified_time" content="2024-08-07T02:55:48.121Z">
+<meta property="og:image" content="https://stealhd.github.io/2024/08/12/Zerotier/image-20240812163151417.png">
+<meta property="og:image" content="https://stealhd.github.io/2024/08/12/Zerotier/image-20240812163608254.png">
+<meta property="og:image" content="https://stealhd.github.io/2024/08/12/Zerotier/image-20240812164541716.png">
+<meta property="og:image" content="https://stealhd.github.io/2024/08/12/Zerotier/image-20240812164642136.png">
+<meta property="article:published_time" content="2024-08-12T08:23:28.000Z">
+<meta property="article:modified_time" content="2024-08-12T09:29:26.268Z">
 <meta property="article:author" content="Feng sj">
-<meta property="article:tag" content="HA">
+<meta property="article:tag" content="Zerotier">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://stealhd.github.io/2024/08/12/Zerotier/image-20240812163151417.png">
   
   
   
-  <meta name="keywords" content="HA">
+  <meta name="keywords" content="Zerotier">
 
   <!-- feed -->
   
@@ -64,7 +71,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/07/HA-install/"><span class="title">HA nstall</span></a><a class="item title" href="/2024/08/01/Oracle-Dblink/"><span class="title">Oracle data transform use dblink</span></a><a class="item title" href="/2024/05/22/Install-Mysql8-bash-on-Centos7/"><span class="title">Install Mysql8 base on Centos7</span></a><a class="item title" href="/2024/05/23/Monitoring-system-installation/"><span class="title">Monitoring system installation</span></a><a class="item title" href="/2024/05/07/hello-world/"><span class="title">Hello World</span></a><a class="item title" href="/2024/05/17/DMDB-install-Base-on-Kylin/"><span class="title">DMDB8 install Base on Kylin</span></a><a class="item title" href="/2024/05/15/Installing-Oracle-GoldenGate/"><span class="title">Installing Oracle GoldenGate</span></a><a class="item title" href="/2024/05/14/Oracle11g_install/"><span class="title">centos 7 oracle11g install</span></a><a class="item title" href="/2024/05/08/hexo%E6%90%AD%E5%BB%BA/"><span class="title">hexo搭建部署</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/05/07/hello-world/"><span class="title">Hello World</span></a><a class="item title" href="/2024/08/12/Zerotier/"><span class="title">Zerotier</span></a><a class="item title" href="/2024/08/01/Oracle-Dblink/"><span class="title">Oracle data transform use dblink</span></a><a class="item title" href="/2024/05/22/Install-Mysql8-bash-on-Centos7/"><span class="title">Install Mysql8 base on Centos7</span></a><a class="item title" href="/2024/05/23/Monitoring-system-installation/"><span class="title">Monitoring system installation</span></a><a class="item title" href="/2024/05/17/DMDB-install-Base-on-Kylin/"><span class="title">DMDB8 install Base on Kylin</span></a><a class="item title" href="/2024/05/15/Installing-Oracle-GoldenGate/"><span class="title">Installing Oracle GoldenGate</span></a><a class="item title" href="/2024/05/14/Oracle11g_install/"><span class="title">centos 7 oracle11g install</span></a><a class="item title" href="/2024/05/08/hexo%E6%90%AD%E5%BB%BA/"><span class="title">hexo搭建部署</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -76,19 +83,32 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="tag"> <br><span>&nbsp标签：</span><a class="cap breadcrumb-link" href="/tags/HA/">HA</a>&nbsp</div><br>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-07T02:55:18.000Z">2024-08-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-07T02:55:48.121Z">2024-08-07</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="tag"> <br><span>&nbsp标签：</span><a class="cap breadcrumb-link" href="/tags/Zerotier/">Zerotier</a>&nbsp</div><br>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-12T08:23:28.000Z">2024-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-12T09:29:26.268Z">2024-08-12</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>HA nstall</span></h1>
+        <h1 class="text title"><span>Zerotier</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content">
+  </div><article class="md-text content"><h2 id="基于Zerotier根服务器的内网穿透部署"><a href="#基于Zerotier根服务器的内网穿透部署" class="headerlink" title="基于Zerotier根服务器的内网穿透部署"></a>基于Zerotier根服务器的内网穿透部署</h2><h3 id="创建（伪）根服务器"><a href="#创建（伪）根服务器" class="headerlink" title="创建（伪）根服务器"></a>创建（伪）根服务器</h3><p>项目地址：<a href="https://gitee.com/link?target=https://github.com/Jonnyan404/zerotier-planet">https://github.com/Jonnyan404/zerotier-planet</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=on-failure:3 -d --name ztncui -e HTTP_PORT=4000 -e HTTP_ALL_INTERFACES=<span class="built_in">yes</span> -e ZTNCUI_PASSWD=mrdoc.fun -p 4000:4000 keynetworks/ztncui</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建-moon-服务器"><a href="#创建-moon-服务器" class="headerlink" title="创建 moon 服务器"></a>创建 moon 服务器</h3><p>项目地址：<a href="https://gitee.com/link?target=https://github.com/jonnyan404/docker-zerotier-moon">https://github.com/jonnyan404/docker-zerotier-moon</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建容器</span></span><br><span class="line">docker run --name zerotier-moon -d -p 9993:9993 -p 9993:9993/udp -v /etc/ztconf/:/var/lib/zerotier-one jonnyan404/zerotier-moon -4 [公网ipx.x.x.x]</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看moon ID</span></span><br><span class="line">docker logs zerotier-moon</span><br></pre></td></tr></table></figure>
+
+<h3 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h3><h4 id="进入-IP-：4000-进入先改密码，默认密码-mrdoc-fun"><a href="#进入-IP-：4000-进入先改密码，默认密码-mrdoc-fun" class="headerlink" title="进入[IP]：4000 进入先改密码，默认密码  mrdoc.fun"></a>进入[IP]：4000 进入先改密码，默认密码  mrdoc.fun</h4><h4 id="创建网段"><a href="#创建网段" class="headerlink" title="创建网段"></a><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="image-20240812163151417.png">创建网段</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="image-20240812163608254.png" alt="image-20240812163608254"></p>
+<h4 id="下载Zerotire客户端"><a href="#下载Zerotire客户端" class="headerlink" title="下载Zerotire客户端"></a>下载Zerotire客户端</h4><p>加入自己id的网络，还需要授权</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="image-20240812164541716.png" alt="image-20240812164541716"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="image-20240812164642136.png" alt="image-20240812164642136"></p>
+<h4 id="配置moon服务器"><a href="#配置moon服务器" class="headerlink" title="配置moon服务器"></a>配置moon服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看moon ID</span></span><br><span class="line">docker logs zerotier-moon</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> C:\ProgramData\ZeroTier\One</span><br><span class="line">zerotier-cli orbit [moon_id] [moon_id]</span><br></pre></td></tr></table></figure>
+
+<p>注：参考【<a target="_blank" rel="noopener" href="https://gitee.com/spoto/natserver#windows-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8A%A0%E5%85%A5moon%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%91">https://gitee.com/spoto/natserver#windows-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8A%A0%E5%85%A5moon%E6%9C%8D%E5%8A%A1%E5%99%A8】</a></p>
+
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -107,7 +127,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Feng sj</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1">Stellar 1.28.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EZerotier%E6%A0%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E9%83%A8%E7%BD%B2"><span class="toc-text">基于Zerotier根服务器的内网穿透部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%EF%BC%88%E4%BC%AA%EF%BC%89%E6%A0%B9%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">创建（伪）根服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-moon-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">创建 moon 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-text">网络配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5-IP-%EF%BC%9A4000-%E8%BF%9B%E5%85%A5%E5%85%88%E6%94%B9%E5%AF%86%E7%A0%81%EF%BC%8C%E9%BB%98%E8%AE%A4%E5%AF%86%E7%A0%81-mrdoc-fun"><span class="toc-text">进入[IP]：4000 进入先改密码，默认密码  mrdoc.fun</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E6%AE%B5"><span class="toc-text">创建网段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDZerotire%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">下载Zerotire客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEmoon%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">配置moon服务器</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
